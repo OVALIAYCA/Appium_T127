@@ -1,4 +1,4 @@
-package day1;
+package tests;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
@@ -65,6 +65,7 @@ public class Calculator {
 
 
         Assert.assertEquals(Integer.parseInt(sonuc),1400);
+        //parseInt string sonucu integer a çevirip karşılaştırma yaptık.
 
 
 
