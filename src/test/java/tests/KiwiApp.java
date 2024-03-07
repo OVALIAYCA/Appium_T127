@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.KiwiPage;
 import utilities.Driver;
-import utilities.HardWait;
 import utilities.ReusableMethods;
 
 
@@ -31,7 +30,7 @@ public class KiwiApp {
         // misafir olarak devam et e tiklanir
         page.guestButton.click();
 
-        HardWait.hardWait(1000);
+        ReusableMethods.hardWait(1);
 
         // ardinda gelecek olan 3 adimada yesil butona basilarak devam edilir
 
@@ -45,7 +44,7 @@ public class KiwiApp {
         //ReusableMethods.scrollUp(500); yukarı kaydırma hızını biz belirledik sadece.Parametre olarak waitActiongirdik.
 
         // Trip type,one way olarak secilir
-        HardWait.hardWait(2500);
+        ReusableMethods.hardWait(2);
         ReusableMethods.coordinateClick(300,620,1000);
         ReusableMethods.coordinateClick(478,1455,500);
 
@@ -65,15 +64,47 @@ public class KiwiApp {
             driver.getKeyboard().pressKey("Istanbul");
         }
 
+        ReusableMethods.hardWait(1);
+
+        ReusableMethods.coordinateClick(482,289,1000);
+
+        ReusableMethods.hardWait(1);
+
+        page.chooseButton.click();
+
         // varis ulkesi secenegine tiklanir ve gidilecek ulke girilir
 
+        ReusableMethods.coordinateClick(452,924,500);
+        driver.getKeyboard().pressKey("Antalya");
+
+        ReusableMethods.hardWait(3);
+
+        ReusableMethods.coordinateClick(482,289,1000);
+
+        ReusableMethods.hardWait(1);
+
+        page.chooseButton.click();
+
+
         // gidis tarihi eylul ayinin 21 i olarak secilir ve set date e tiklanir
+        ReusableMethods.coordinateClick(485,1052,500);
+        ReusableMethods.coordinateClick(689,1108,500);
+        ReusableMethods.coordinateClick(700,1722,500);
 
         // search butonuna tiklanir
+        ReusableMethods.coordinateClick(561,1194,500);
 
         // en  ucuz ve aktarmasiz filtrelemeleri yapilir
+        ReusableMethods.coordinateClick(244,261,500);
+        ReusableMethods.coordinateClick(528,574,500);
+        ReusableMethods.coordinateClick(528,254,500);
+        ReusableMethods.coordinateClick(498,1455,500);
 
         // gelen bilet fiyati kaydedilir ve kullanicin telefonuna sms olarak gonderilir
+        AndroidElement enUcuzBilet = driver.findElementByXPath("(//*[@class='android.widget.TextView'])[12]");
+        String sonuc = enUcuzBilet.getText();
+
+        driver.sendSMS("5555555555","Çevirmek istediğiniz para birimi sonucu : " + sonuc);
 
     }
 

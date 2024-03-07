@@ -90,6 +90,16 @@ public class ReusableMethods {
     }
 
 
+    public static void hardWait(int duration){
+
+        try {
+            Thread.sleep(duration * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }

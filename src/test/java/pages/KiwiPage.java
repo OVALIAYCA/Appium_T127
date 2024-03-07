@@ -19,6 +19,8 @@ public class KiwiPage {
     @FindBy(xpath = "//*[@class='android.widget.EditText']")
     public WebElement departureText;
 
+    @FindBy(xpath = "//*[@text='Choose']")
+    public WebElement chooseButton;
 
 
 

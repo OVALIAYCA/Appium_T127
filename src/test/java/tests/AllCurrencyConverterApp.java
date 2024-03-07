@@ -53,7 +53,12 @@ public class AllCurrencyConverterApp {
         ReusableMethods.getScreenshot("ZlotyToTl");
 
         // Ardindan zloty nin tl karsiligi olan tl degeri kaydedilir
+        AndroidElement exchangeResult = driver.findElementById("com.smartwho.SmartAllCurrencyConverter:id/EditTextCurrencyB");
+        String sonuc = exchangeResult.getText();
+
         
         // kullaniciya sms olarak bildirilir
+        driver.sendSMS("5555555555","Çevirmek istediğiniz para birimi sonucu : " + sonuc);
+
     }
 }
