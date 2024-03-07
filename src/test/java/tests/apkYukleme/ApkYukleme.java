@@ -22,7 +22,7 @@ public class ApkYukleme {
         capabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION,"10.0");
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
-        capabilities.setCapability(MobileCapabilityType.APP,"/Users/aycaergunovali/Documents/Appium_T127/apps/Kiwi.com - Book Cheap Flights_2023.14.0_Apkpure (1).apk");
+        capabilities.setCapability(MobileCapabilityType.APP,"/Users/aycaergunovali/Documents/Appium_T127/apps/all-currency-converter-3-9-0 (1).apk");
         /*bu satır önemli. UiAuomator2 sadece android 6 dan yüksek android sistemleri ile çalışır
          android 6 ve düşük versiyonlar için UiAuomator kullanılır
          platformName, platformVersion ve AutomationName olmazsa olmazıdır.

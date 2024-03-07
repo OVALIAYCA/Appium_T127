@@ -6,24 +6,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class KiwiPage {
+public class AllCurrencyPage {
 
 
-    public KiwiPage(){
+    public AllCurrencyPage(){
         PageFactory.initElements((WebDriver) Driver.getAndroidDriver(),this);
     }
 
-    @FindBy(xpath = "//*[@text='Continue as a guest']")
-    public WebElement guestButton;
 
-    @FindBy(xpath = "//*[@class='android.widget.EditText']")
-    public WebElement departureText;
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@text='CURRENCY CONVERTER']")
+    public WebElement headerText;
 }
